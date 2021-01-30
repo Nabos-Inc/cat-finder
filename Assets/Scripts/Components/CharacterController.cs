@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace CatFinder
@@ -7,6 +8,8 @@ namespace CatFinder
     {
         private Movement m_movement = null;
         private LookAt2D m_lookAt = null;
+
+        [SerializeField] private TextMeshProUGUI m_text = null;
 
         // Start is called before the first frame update
         void Awake()
@@ -33,6 +36,25 @@ namespace CatFinder
             if (m_lookAt != null)
             {
                 m_lookAt.LookAt(direction);
+            }
+        }
+
+        private void OnFire()
+        {
+            if (m_lookAt == null) return;
+
+            Vector3 currentPos = transform.position;
+            currentPos.y += 0.5f;
+            currentPos += m_lookAt.Direction.ToXZVector3() * 0.75f;
+
+            Collider[] colliders = Physics.OverlapSphere(currentPos, 0.5f);
+            if (colliders == null) return;
+
+            foreach (var coll in colliders)
+            {
+                if (m_text == null) continue;
+
+                m_text.text = $"Interacted with { coll.gameObject.name }";
             }
         }
     }
