@@ -1,37 +1,39 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CatFinder
 {
     public class CharacterController : MonoBehaviour
     {
-        private const string kHorizontalAxis = "Horizontal";
-        private const string kVerticalAxis = "Vertical";
-
         private Movement m_movement = null;
-        private Vector2 m_movementDir = Vector2.zero;
+        private LookAt2D m_lookAt = null;
 
         // Start is called before the first frame update
         void Awake()
         {
             m_movement = GetComponent<Movement>();
+            m_lookAt = GetComponent<LookAt2D>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            UpdateMovement();
+
         }
 
-        private void UpdateMovement()
+        private void OnMove(InputValue inputValue)
         {
-            if (m_movement == null) return;
-            
-            float xInput = Input.GetAxis(kHorizontalAxis);
-            float zInput = Input.GetAxis(kVerticalAxis);
+            Vector2 direction = inputValue.Get<Vector2>();
 
-            m_movementDir.Set(xInput, zInput);
+            if (m_movement != null)
+            {
+                m_movement.Move(direction);
+            }
 
-            m_movement.Move(m_movementDir);
+            if (m_lookAt != null)
+            {
+                m_lookAt.LookAt(direction);
+            }
         }
     }
 }
