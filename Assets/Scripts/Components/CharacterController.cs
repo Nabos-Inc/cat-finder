@@ -10,8 +10,6 @@ namespace CatFinder
         private LookAt2D m_lookAt = null;
         private ContactCheck m_contactCheck = null;
 
-        [SerializeField] private TextMeshProUGUI m_text = null;
-
         // Start is called before the first frame update
         void Awake()
         {
@@ -20,21 +18,33 @@ namespace CatFinder
             m_contactCheck = GetComponent<ContactCheck>();
         }
 
+        private void Start()
+        {
+            InputController.Instance.OnMoveEvent += OnMove;
+            InputController.Instance.OnFireEvent += OnFire;
+        }
+
+        private void OnDestroy()
+        {
+            InputController.Instance.OnMoveEvent -= OnMove;
+            InputController.Instance.OnFireEvent -= OnFire;
+        }
+
         // Update is called once per frame
         void Update()
         {
             if (m_movement != null && m_movement.IsMoving())
             {
-                if (m_contactCheck.CheckDirection(m_movement.Direction))
+                if (m_contactCheck.CheckDirection(m_movement.Direction) || !CanMove())
                 {
                     m_movement.Stop();
                 }
             }
         }
 
-        private void OnMove(InputValue inputValue)
+        private void OnMove(Vector2 direction)
         {
-            Vector2 direction = inputValue.Get<Vector2>();
+            if (!CanMove()) return;
 
             bool inContact = m_contactCheck != null && direction != Vector2.zero && m_contactCheck.CheckDirection(direction);
 
@@ -51,17 +61,31 @@ namespace CatFinder
 
         private void OnFire()
         {
-            if (m_lookAt == null || m_contactCheck == null) return;
+
+            if (m_lookAt == null || m_contactCheck == null || !CanInteract()) return;
 
             Collider[] colliders = m_contactCheck.GetColliders(m_lookAt.Direction);
             if (colliders == null) return;
 
-            foreach (var coll in colliders)
+            int size = colliders.Length;
+            for (int i = 0; i < size; i++)
             {
-                if (m_text == null) continue;
-
-                m_text.text = $"Interacted with { coll.gameObject.name }";
+                Interactable interactable = colliders[i].gameObject.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    interactable.InvokeOnInteract();
+                }
             }
+        }
+
+        private bool CanInteract()
+        {
+            return !UIManager.Instance.DialogueUI.IsDialogueActive();
+        }
+
+        private bool CanMove()
+        {
+            return !UIManager.Instance.DialogueUI.IsDialogueActive();
         }
     }
 }
