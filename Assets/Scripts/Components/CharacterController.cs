@@ -4,8 +4,10 @@ using UnityEngine.InputSystem;
 
 namespace CatFinder
 {
+    [RequireComponent(typeof(Actor))]
     public class CharacterController : MonoBehaviour
     {
+        private Actor m_actor = null;
         private Movement m_movement = null;
         private LookAt2D m_lookAt = null;
         private ContactCheck m_contactCheck = null;
@@ -16,6 +18,7 @@ namespace CatFinder
             m_movement = GetComponent<Movement>();
             m_lookAt = GetComponent<LookAt2D>();
             m_contactCheck = GetComponent<ContactCheck>();
+            m_actor = GetComponent<Actor>();
         }
 
         private void Start()
@@ -61,7 +64,6 @@ namespace CatFinder
 
         private void OnFire()
         {
-
             if (m_lookAt == null || m_contactCheck == null || !CanInteract()) return;
 
             Collider[] colliders = m_contactCheck.GetColliders(m_lookAt.Direction);
@@ -73,7 +75,7 @@ namespace CatFinder
                 Interactable interactable = colliders[i].gameObject.GetComponent<Interactable>();
                 if (interactable != null)
                 {
-                    interactable.InvokeOnInteract();
+                    interactable.InvokeOnInteract(m_actor);
                 }
             }
         }
