@@ -9,11 +9,17 @@ namespace CatFinder
         [SerializeField] RectTransform m_loadingUI = null;
         [SerializeField] int m_mainMenuSceneIdx = 1;
         [SerializeField] int m_gameSceneIdx = 2;
-        [SerializeField] bool m_loadMainMenuOnStart = true; 
+        [SerializeField] bool m_loadMainMenuOnStart = true;
+
+        private AudioController m_audioController = null;
+
+        public AudioController AudioController { get => m_audioController; }
 
         // Start is called before the first frame update
         protected override void OnSingletonAwake()
         {
+            m_audioController = GetComponentInChildren<AudioController>();
+
             SceneManager.activeSceneChanged += HideLoadingUI;
 
             if (m_loadMainMenuOnStart)
@@ -39,6 +45,7 @@ namespace CatFinder
         private IEnumerator LoadScene(int index)
         {
             ShowLoadingUI();
+            m_audioController.StopAll();
 
             yield return null;
 
