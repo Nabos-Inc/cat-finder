@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +8,7 @@ namespace CatFinder
     {
         public event Action<Vector2> OnMoveEvent;
         public event Action OnFireEvent;
+        public event Action OnPauseEvent;
 
         private void OnMove(InputValue inputValue)
         {
@@ -21,6 +20,11 @@ namespace CatFinder
         private void OnFire()
         {
             OnFireEvent?.Invoke();
+        }
+
+        private void OnPause()
+        {
+            OnPauseEvent?.Invoke();
         }
     }
 }

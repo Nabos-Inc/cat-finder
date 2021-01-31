@@ -10,6 +10,8 @@ namespace CatFinder
         private List<Quest> m_completedQuests = null;
         private Quest m_currentQuest = null;
 
+        public Quest CurrentQuest { get => m_currentQuest; }
+
         protected override void OnSingletonAwake()
         {
             m_completedQuests = new List<Quest>();

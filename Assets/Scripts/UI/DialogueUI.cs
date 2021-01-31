@@ -83,9 +83,9 @@ namespace CatFinder
             ShowCurrentDialogueAction();
         }
 
-        public bool IsDialogueActive()
+        public bool IsActive()
         {
-            return m_currentActionIdx > -1;
+            return gameObject.activeSelf;
         }
 
         public void ContinueDialogue()
