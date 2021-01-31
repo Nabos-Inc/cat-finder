@@ -58,7 +58,7 @@ namespace CatFinder
 
         public void CloseApp()
         {
-            Application.Quit();
+            AppManager.Instance.LoadMainMenu();
         }
 
         public bool IsActive()
