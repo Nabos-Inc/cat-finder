@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1012831f6f6d94d8fed934d5cacb6c, type: 3}
-  m_Name: Cat
+  m_Script: {fileID: 11500000, guid: a72b8dc61b932d549b75925bcac93c37, type: 3}
+  m_Name: Taco
   m_EditorClassIdentifier: 
-  m_pickableName: The cat
-  m_image: {fileID: 21300000, guid: 5e88794a309839048b8bda391c50d38b, type: 3}
+  m_characterName: Taco

@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47fdac1c789e47545ad8261b99a7bace, type: 3}
-  m_Name: Finish
+  m_Name: Mailbox
   m_EditorClassIdentifier: 
   m_actions:
-  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
-    m_text: "\xA1Lo encontraste!"
-    m_additionalActions: 02000000
-  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
-    m_text: Muchas gracias!
-    m_additionalActions: 03000000
+  - m_character: {fileID: 0}
+    m_text: A mailbox.
+    m_sfx: {fileID: 0}
+    m_additionalActions: 

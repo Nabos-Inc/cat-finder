@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d1a7e24673c1ef4190cd3c2aa75e05c, type: 3}
-  m_Name: TestQuest
+  m_Name: TacoQuest
   m_EditorClassIdentifier: 
   m_requester: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
   m_requestedItem: {fileID: 11400000, guid: 929c36008a3889649a0e0fd8e909b528, type: 2}
   m_title: 
-  m_description: Ayuda a la vieja a conseguir su gato.
+  m_description: He likes to play with the mailboxes.
   m_visualHint: {fileID: 0}
   m_audioHint: {fileID: 0}

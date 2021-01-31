@@ -21,6 +21,8 @@ namespace CatFinder
                 m_characterLabel.text = characterName;
             }
 
+            m_characterLabel.transform.parent.gameObject.SetActive(!string.IsNullOrEmpty(characterName));
+
             if (m_dialogueArea != null)
             {
                 m_dialogueArea.text = text;

@@ -10,9 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47fdac1c789e47545ad8261b99a7bace, type: 3}
-  m_Name: Complete
+  m_Name: TacoStarting
   m_EditorClassIdentifier: 
   m_actions:
   - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
-    m_text: "Cuando estemos en casa te ba\xF1o."
+    m_text: Hello! Can you help me to find my cat?
+    m_sfx: {fileID: 0}
+    m_additionalActions: 
+  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
+    m_text: His name is Taco.
+    m_sfx: {fileID: 0}
+    m_additionalActions: 
+  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
+    m_text: He likes to play with the mailboxes.
+    m_sfx: {fileID: 0}
     m_additionalActions: 

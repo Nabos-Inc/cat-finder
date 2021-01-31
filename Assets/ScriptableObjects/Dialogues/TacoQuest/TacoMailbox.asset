@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47fdac1c789e47545ad8261b99a7bace, type: 3}
-  m_Name: Active
+  m_Name: TacoMailbox
   m_EditorClassIdentifier: 
   m_actions:
-  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
-    m_text: "No pierdas tiempo, b\xFAscalo."
-    m_additionalAction: 0
+  - m_character: {fileID: 11400000, guid: e3962cb1a64bce24383167a3316fd668, type: 2}
+    m_text: Meoow!
+    m_sfx: {fileID: 0}
+    m_additionalActions: 01000000

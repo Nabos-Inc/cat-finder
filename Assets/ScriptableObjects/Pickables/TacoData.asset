@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fdac1c789e47545ad8261b99a7bace, type: 3}
-  m_Name: Starting
+  m_Script: {fileID: 11500000, guid: cd1012831f6f6d94d8fed934d5cacb6c, type: 3}
+  m_Name: TacoData
   m_EditorClassIdentifier: 
-  m_actions:
-  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
-    m_text: "No encuentro a mi gato, b\xFAscalo ahora mismo."
-    m_additionalAction: 0
+  m_pickableName: Taco
+  m_image: {fileID: 21300000, guid: ad4769e00f7bb6746938d0b070b92d3a, type: 3}

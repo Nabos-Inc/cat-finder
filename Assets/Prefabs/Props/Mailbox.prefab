@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8003177521571490823}
   - component: {fileID: 6830268697166221823}
   - component: {fileID: 498414918651825622}
+  - component: {fileID: 646905288541835494}
+  - component: {fileID: 7128856195798226680}
   m_Layer: 0
   m_Name: Mailbox
   m_TagString: Untagged
@@ -93,3 +95,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5197792, y: 0.88119733, z: 0.39999998}
   m_Center: {x: 0, y: 0.44059867, z: 0}
+--- !u!114 &646905288541835494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516495273833564089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d8ed5fed871e24ca40f4b34b8c0656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inventory:
+    m_object: {fileID: 0}
+    m_onObjectReceived:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onObjectGiven:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &7128856195798226680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516495273833564089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef61c239d7fb8f4a8e86b23f2d5ba0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7128856195798226680}
+        m_MethodName: StartDialogue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 676e39641e6ff744a93c76806a5e8eec,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: CatFinder.Dialogue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

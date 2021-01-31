@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72b8dc61b932d549b75925bcac93c37, type: 3}
-  m_Name: OldLady
+  m_Script: {fileID: 11500000, guid: 47fdac1c789e47545ad8261b99a7bace, type: 3}
+  m_Name: TacoActive
   m_EditorClassIdentifier: 
-  m_characterName: Old Lady
+  m_actions:
+  - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
+    m_text: "No pierdas tiempo, b\xFAscalo."
+    m_sfx: {fileID: 0}
+    m_additionalActions: 
