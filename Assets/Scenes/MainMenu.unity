@@ -157,7 +157,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.20901564, g: 0.41022652, b: 0.7264151, a: 0}
+  m_BackGroundColor: {r: 0.46274507, g: 0.8929991, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -388,66 +388,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2027483579761291846, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027483579761291846, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027483579761291846, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027483579761291846, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214794099937092962, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214794099937092962, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214794099937092962, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214794099937092962, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184152737194013657, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184152737194013657, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184152737194013657, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184152737194013657, guid: a53b7ac2102cf04438740dc2015b54d0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8462693859572297618, guid: a53b7ac2102cf04438740dc2015b54d0,
         type: 3}
       propertyPath: m_Pivot.x
