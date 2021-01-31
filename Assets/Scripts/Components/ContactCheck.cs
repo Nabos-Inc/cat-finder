@@ -15,6 +15,7 @@ namespace CatFinder
         [SerializeField] private float m_yOffset = 0.5f;
         [SerializeField] private float m_sphereRadius = 0.5f;
         [SerializeField] private float m_checkDistance = 0.75f;
+        [SerializeField] private LayerMask m_layers;
 
         [Header("Debug")]
         [SerializeField] private Color m_lineColor = Color.red;
@@ -26,7 +27,7 @@ namespace CatFinder
             center.y += m_yOffset;
             center += direction.ToXZVector3() * m_checkDistance;
 
-            Collider[] colliders = Physics.OverlapSphere(center, m_sphereRadius);
+            Collider[] colliders = Physics.OverlapSphere(center, m_sphereRadius, m_layers.value);
 
 #if UNITY_EDITOR
             DrawDebugLine(center, new Vector3(0f, 0f, 1f));
