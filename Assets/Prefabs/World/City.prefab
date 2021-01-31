@@ -58863,6 +58863,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2438256409009628939}
     m_Modifications:
+    - target: {fileID: 4603181936435511109, guid: f122b46a0435f6f4abbf41cd9f508d44,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 2.48
+      objectReference: {fileID: 0}
     - target: {fileID: 7684528880331273604, guid: f122b46a0435f6f4abbf41cd9f508d44,
         type: 3}
       propertyPath: m_Name
