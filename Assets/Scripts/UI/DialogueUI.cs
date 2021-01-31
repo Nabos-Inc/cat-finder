@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +14,7 @@ namespace CatFinder
         private Actor m_starter = null;
         private Actor m_receiver = null;
 
-        private void ShowDialogue(string characterName, string text, AdditionalAction additionalAction)
+        private void ShowDialogue(string characterName, string text, List<AdditionalAction> additionalActions)
         {
             if (m_characterLabel != null)
             {
@@ -28,37 +26,47 @@ namespace CatFinder
                 m_dialogueArea.text = text;
             }
 
-            if (additionalAction == AdditionalAction.None) return;
+            ExecuteAdditionalActions(additionalActions);
+        }
 
-            switch (additionalAction)
+       private void ExecuteAdditionalActions(List<AdditionalAction> additionalActions)
+        {
+            if (additionalActions == null) return;
+
+            int size = additionalActions.Count;
+            for (int i = 0; i < size; i++)
             {
-                case AdditionalAction.GiveObject:
-                    {
-                        m_starter.GiveObject(m_receiver);
-                        break;
-                    }
-                case AdditionalAction.TakeObject:
-                    {
-                        m_receiver.GiveObject(m_starter);
-                        break;
-                    }
-                case AdditionalAction.CompleteQuest:
-                    {
-                        QuestController.Instance.CompleteCurrentQuest();
-                        break;
-                    }
-                default:
-                    {
-                        Debug.LogWarning("Additional action not supported.");
-                        break;
-                    }
+                AdditionalAction action = additionalActions[i];
+                switch (action)
+                {
+                    case AdditionalAction.GiveObject:
+                        {
+                            m_starter.GiveObject(m_receiver);
+                            break;
+                        }
+                    case AdditionalAction.TakeObject:
+                        {
+                            m_receiver.GiveObject(m_starter);
+                            break;
+                        }
+                    case AdditionalAction.CompleteQuest:
+                        {
+                            QuestController.Instance.CompleteCurrentQuest();
+                            break;
+                        }
+                    default:
+                        {
+                            Debug.LogWarning("Additional action not supported.");
+                            break;
+                        }
+                }
             }
         }
 
         private void ShowCurrentDialogueAction()
         {
             DialogueAction action = m_dialogue.Actions[m_currentActionIdx];
-            ShowDialogue(action.Character, action.Text, action.AdditionalAction);
+            ShowDialogue(action.Character, action.Text, action.AdditionalActions);
         }
 
         public void ExecuteDialogue(Dialogue dialogue, Actor starter, Actor receiver)

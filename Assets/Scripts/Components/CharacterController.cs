@@ -72,7 +72,7 @@ namespace CatFinder
             int size = colliders.Length;
             for (int i = 0; i < size; i++)
             {
-                Interactable interactable = colliders[i].gameObject.GetComponent<Interactable>();
+                BaseInteractable interactable = colliders[i].gameObject.GetComponent<BaseInteractable>();
                 if (interactable != null)
                 {
                     interactable.InvokeOnInteract(m_actor);

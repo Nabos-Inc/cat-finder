@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72b8dc61b932d549b75925bcac93c37, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: 47fdac1c789e47545ad8261b99a7bace, type: 3}
+  m_Name: Bench
   m_EditorClassIdentifier: 
-  m_characterName: Vieja
+  m_actions:
+  - m_character: {fileID: 11400000, guid: e3962cb1a64bce24383167a3316fd668, type: 2}
+    m_text: Soy un banco.
+    m_additionalActions: 

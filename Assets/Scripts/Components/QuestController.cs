@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace CatFinder
@@ -11,7 +10,7 @@ namespace CatFinder
         private List<Quest> m_completedQuests = null;
         private Quest m_currentQuest = null;
 
-        private void Awake()
+        protected override void OnSingletonAwake()
         {
             m_completedQuests = new List<Quest>();
         }

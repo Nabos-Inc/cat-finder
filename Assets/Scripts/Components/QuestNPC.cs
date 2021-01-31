@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace CatFinder
 {
-    public class QuestNPC : Interactable
+    public class QuestNPC : BaseInteractable
     {
         [SerializeField] private Quest m_quest = null;
         [SerializeField] protected UnityEvent m_onQuestNoInitiable = null;
