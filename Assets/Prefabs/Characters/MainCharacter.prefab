@@ -123,6 +123,11 @@ PrefabInstance:
       propertyPath: m_inventory.m_onObjectReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8835417971922445957, guid: 84aec2d748051b445924cf8d9dd4494e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8969909468860818221, guid: 84aec2d748051b445924cf8d9dd4494e,
         type: 3}
       propertyPath: m_Sprite
