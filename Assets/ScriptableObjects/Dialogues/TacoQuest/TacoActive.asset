@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_actions:
   - m_character: {fileID: 11400000, guid: 3f0af179f32e0df49a6c614ae61b7fb9, type: 2}
-    m_text: "No pierdas tiempo, b\xFAscalo."
+    m_text: Please, find Taco.
     m_sfx: {fileID: 0}
     m_additionalActions: 

@@ -15,5 +15,5 @@ MonoBehaviour:
   m_actions:
   - m_character: {fileID: 11400000, guid: e3962cb1a64bce24383167a3316fd668, type: 2}
     m_text: Meoow!
-    m_sfx: {fileID: 0}
+    m_sfx: {fileID: 8300000, guid: 49853c0ed53f8d84c8c2adfa47a4c430, type: 3}
     m_additionalActions: 01000000
