@@ -82,12 +82,12 @@ namespace CatFinder
 
         private bool CanInteract()
         {
-            return !UIManager.Instance.DialogueUI.IsDialogueActive();
+            return !UIManager.Instance.DialogueUI.IsActive() && !UIManager.Instance.PauseUI.IsActive();
         }
 
         private bool CanMove()
         {
-            return !UIManager.Instance.DialogueUI.IsDialogueActive();
+            return !UIManager.Instance.DialogueUI.IsActive() && !UIManager.Instance.PauseUI.IsActive();
         }
     }
 }

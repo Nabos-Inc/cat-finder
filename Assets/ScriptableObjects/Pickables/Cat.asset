@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1012831f6f6d94d8fed934d5cacb6c, type: 3}
   m_Name: Cat
   m_EditorClassIdentifier: 
+  m_pickableName: The cat
   m_image: {fileID: 0}
