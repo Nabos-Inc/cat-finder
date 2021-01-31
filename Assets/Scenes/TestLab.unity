@@ -227,7 +227,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_clip
       value: 
-      objectReference: {fileID: 8300000, guid: 00dc2c07577721c4b8ce00fa022fffc5, type: 3}
+      objectReference: {fileID: 8300000, guid: 52d7d42dfea9ccc4488805856fc3d5ca, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac157aef75c4ce4296824db4032d0fd, type: 3}
 --- !u!1 &289222671
