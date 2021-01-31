@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CatFinder
 {
@@ -14,7 +12,19 @@ namespace CatFinder
         {
             if (!m_inventory.CanGiveObject()) return false;
 
-            return toActor.m_inventory.ReceiveObject(m_inventory);
+            bool received = toActor.m_inventory.ReceiveObject(m_inventory);
+
+            if (received)
+            {
+                m_inventory.InvokeOnObjectGiven();
+            }
+
+            return received;
+        }
+
+        public void UpdateInventoryUIWithContent()
+        {
+            UIManager.Instance.InventoryUI.SetContent(m_inventory);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace CatFinder
         private Actor m_starter = null;
         private Actor m_receiver = null;
 
-        private void ShowDialogue(string characterName, string text, List<AdditionalAction> additionalActions)
+        private void ShowDialogue(string characterName, string text, AudioClip sfx, List<AdditionalAction> additionalActions)
         {
             if (m_characterLabel != null)
             {
@@ -24,6 +24,11 @@ namespace CatFinder
             if (m_dialogueArea != null)
             {
                 m_dialogueArea.text = text;
+            }
+
+            if (sfx != null)
+            {
+                AppManager.Instance.AudioController.PlaySfxClip(sfx);
             }
 
             ExecuteAdditionalActions(additionalActions);
@@ -66,7 +71,7 @@ namespace CatFinder
         private void ShowCurrentDialogueAction()
         {
             DialogueAction action = m_dialogue.Actions[m_currentActionIdx];
-            ShowDialogue(action.Character, action.Text, action.AdditionalActions);
+            ShowDialogue(action.Character, action.Text, action.Sfx, action.AdditionalActions);
         }
 
         public void ExecuteDialogue(Dialogue dialogue, Actor starter, Actor receiver)

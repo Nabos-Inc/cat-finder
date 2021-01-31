@@ -4,6 +4,8 @@ namespace CatFinder
 {
     public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
     {
+        [SerializeField] private bool m_dontDestroyOnLoad = false;
+
         private static T m_instance = null;
 
         public static T Instance => m_instance;
@@ -20,6 +22,12 @@ namespace CatFinder
             }
 
             m_instance = this as T;
+
+            if (m_dontDestroyOnLoad)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+
             OnSingletonAwake();
         }
 
