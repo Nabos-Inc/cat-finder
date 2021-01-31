@@ -58,7 +58,7 @@ namespace CatFinder
 
         public void CloseApp()
         {
-            Debug.LogWarning("Closing app.");
+            Application.Quit();
         }
 
         public bool IsActive()
